@@ -7,7 +7,7 @@ RUN apt-get update
 RUN apt-get install --assume-yes mesos python-software-properties curl default-jdk
 
 ## MARATHON ##
-ENV VERSION 0.6.1
+ENV VERSION 0.8.0
 ADD http://downloads.mesosphere.io/marathon/marathon-$VERSION/marathon-$VERSION.tgz /tmp/marathon.tgz
 RUN mkdir -p /opt/marathon && tar xzf /tmp/marathon.tgz -C /opt/marathon --strip=1 && rm -f /tmp/marathon.tgz
 
